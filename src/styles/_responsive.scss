@@ -1,0 +1,73 @@
+@media only screen and (max-width: 890px) {
+
+    header {
+        padding: $spacing2 0;
+
+        h1.logo {
+            float: none;
+            margin: 0 auto;
+        }
+
+        nav {
+            float: none;
+            text-align: center;
+            margin: $spacing3 0 0 0;
+            padding: 0;
+
+            ul {
+                li {
+                    margin: 0 $spacing3/2;
+
+                    a {
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .col-1-3 {
+        width: 50%;
+    }
+    section.main {
+        .item {
+            .content {
+                figure {
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+
+                    img {
+                        max-width:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .col-1-3 {
+        width: 100%;
+    }
+
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+
+    header {
+        .container {
+            padding-right: $gutter;
+        }
+    }
+}

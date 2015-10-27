@@ -1,0 +1,108 @@
+<!--
+    @author: Shaun Janssens
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Wij Steunen Rode Neuzen">
+            </h1>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#actie" id="actie">Onze Actie</a>
+                    </li>
+                    <li>
+                        <a href="#steun" id="steun">Ik Steun Ook!</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Dit is een initiatief van <a href="https://www.webdrop.be">Webdrop</a>, <a href="https://www.facebook.com/SneeuwballenLarmuseau">Larmuseau</a> &amp; <a href="https://kadonation.com">Kadonation</a></p>
+    </footer>
+
+<script id="actie-template" type="text/x-handlebars-template">
+    <div class="page">
+        <h1>Over onze actie</h1>
+        <h2>Over onze actie</h2>
+        <h3>Over onze actie</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ab culpa cumque dolor hic illum maxime tenetur voluptate! Aperiam architecto consectetur in iste libero minus sapiente similique temporibus. Debitis, sequi!
+        </p>
+    </div>
+</script>
+
+<script id="steun-template" type="text/x-handlebars-template">
+    <div class="page">
+        <h1>Steun je ons ook?</h1>
+    </div>
+</script>
+
+<script id="items-template" type="text/x-handlebars-template">
+    <ul class="items">
+        {{#each_reverse this}}
+        <li class="item col-1-3">
+            <a href="{{ website }}">
+                <div class="content">
+                    <figure>
+                        <img class="lazy" data-original="{{ image }}">
+
+                        <noscript>
+                            <img src="{{ image }}" alt="{{ title }}">
+                        </noscript>
+
+                        <svg version="1.1" class="svg-loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80 80" xml:space="preserve">
+                            <path id="spinner" fill="#D43B11" d="
+                                M40,72C22.4,72,8,57.6,8,40C8,22.4,
+                                22.4,8,40,8c17.6,0,32,14.4,32,32c0,1.1-0.9,2-2,2
+                                s-2-0.9-2-2c0-15.4-12.6-28-28-28S12,24.6,12,40s12.6,
+                                28,28,28c1.1,0,2,0.9,2,2S41.1,72,40,72z">
+                                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 40 40" to="360 40 40" dur="0.6s" repeatCount="indefinite" />
+                            </path>
+                        </svg>
+                    </figure>
+
+                    <h3>{{ title }}</h3>
+                    <p>
+                        {{ content }}
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each_reverse}}
+    </ul>
+</script>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>if (!window.jQuery) { document.write('<script src="js/jquery.min.js"><\/script>'); }</script>
+
+<script type="text/javascript" src="js/handlebars.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
